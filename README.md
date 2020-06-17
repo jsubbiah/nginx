@@ -13,10 +13,16 @@ $ docker run -p 8080:8080 mynginximage
 $ # browse to http://localhost:8080
 ```
 
+You can build NGINX POD in Openshift by cloning this project and editing nginx.conf with your changes. Nginx.conf is configured to pass all request to google.com. 
+
+`$ oc new-app centos/nginx-112-centos7~./`
+
+
 You can also build and deploy the application on OpenShift, assuming you have a
 working `oc` command line environment connected to your cluster already:
 
 `$ oc new-app centos/nginx-112-centos7~https://github.com/jsubbiah/nginx`
+
 
 You can also deploy the sample template for the application:
 
